@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+
+/* Fallback explicit utilities for primary/secondary/tertiary colors */
+.bg-primary { background-color: #B9FF66; }
+.text-primary { color: #B9FF66; }
+.border-primary { border-color: #B9FF66; }
+
+.bg-secondary { background-color: #191A23; }
+.text-secondary { color: #191A23; }
+.border-secondary { border-color: #191A23; }
+
+.bg-tertiary { background-color: #F3F3F3; }
+.text-tertiary { color: #F3F3F3; }
+.border-tertiary { border-color: #F3F3F3; }
+

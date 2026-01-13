@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Positivus Landing Page</title>
+  <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+  
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body class="font-grotes text-secondary">
+
+  <header class="py-6 px-6 md:px-20 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="./asserts/images/starIcon.png" alt="Logo" class="w-8 h-8">
+      <span class="text-4xl font-semibold">Positivious</span>
+    </div>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="#" class="hover:text-primary font-medium">About us</a>
+      <a href="#" class="hover:text-primary font-medium">Services</a>
+      <a href="#" class="hover:text-primary font-medium">Use Cases</a>
+      <a href="#" class="hover:text-primary font-medium">Pricing</a>
+      <a href="#" class="hover:text-primary font-medium">Blog</a>
+      <button class="border-2 border-secondary rounded-lg px-4 py-2 bg-transparent hover:bg-secondary hover:text-tertiary transition">Request a quote</button>
+    </nav>
+
+    <!-- Mobile hamburger (visible on small screens only) -->
+  <button id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" class="inline-flex md:hidden items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+      <!-- simple hamburger SVG -->
+      <svg class="w-6 h-6 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile menu (hidden by default) -->
+  <nav id="mobileMenu" class="md:hidden hidden bg-tertiary border-t border-tertiary">
+    <div class="px-6 py-4 space-y-3">
+      <a href="#" class="block text-secondary font-medium">About us</a>
+      <a href="#" class="block text-secondary font-medium">Services</a>
+      <a href="#" class="block text-secondary font-medium">Use Cases</a>
+      <a href="#" class="block text-secondary font-medium">Pricing</a>
+      <a href="#" class="block text-secondary font-medium">Blog</a>
+      <button class="w-full border-2 border-secondary rounded-lg px-4 py-2 bg-transparent hover:bg-secondary hover:text-tertiary transition">Request a quote</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="flex flex-col md:flex-row items-center gap-12 py-16 px-6 md:px-20">
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-5xl font-semibold leading-tight">Navigating the digital landscape for success</h1>
+      <p class="text-lg font-medium leading-relaxed">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+      <button class="bg-black text-white px-6 py-4 w-[264px] h-[68px] rounded-2xl font-medium">Book a consultation</button>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <img src="./asserts/illustrations/home-page-illust.png" alt="Hero Illustration" class="rounded-2xl shadow-custom">
+    </div>
+  </section>
+
+  <!-- Company Logos -->
+  <section class="flex flex-wrap justify-center md:justify-start gap-6 py-12 px-6 md:px-20 filter grayscale">
+    <img src="./asserts/logos/amazon.png" class="w-32 h-auto">
+    <img src="./asserts/logos/dribble.png" class="w-32 h-auto">
+    <img src="./asserts/logos/hubspot.png" class="w-32 h-auto">
+    <img src="./asserts/logos/notion.png" class="w-32 h-auto">
+    <img src="./asserts/logos/netflix.png" class="w-32 h-auto">
+    <img src="./asserts/logos/zoom.png" class="w-32 h-auto">
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-6 md:px-20 space-y-12">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <h3 class="bg-primary text-secondary text-center font-bold text-4xl rounded-md px-3 py-1 md:w-1/6 bg-primary text-secondary rounded  px-3 mx-2.5 py-2 text-lg font-semibold">Services</h3>
+      <p class="md:w-5/6 text-secondary font-medium text-lg leading-relaxed">At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-tertiary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-primary text-secondary rounded-md px-2 py-1">Search Engine Optimization</h4>
+          <a href="#" class="flex items-center gap-2 text-secondary font-medium">
+            <img src="./asserts/icons/Arrow Icon 1.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/magnifier.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-primary text-secondary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-tertiary text-secondary rounded-md px-2 py-1">Pay-per-click Advertising</h4>
+          <a href="#" class="flex items-center gap-2 text-secondary font-medium">
+            <img src="./asserts/icons/Arrow Icon 1.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/dialog-box.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-secondary text-tertiary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-tertiary text-secondary rounded-md px-2 py-1">Social Media Marketing</h4>
+          <a href="#" class="flex items-center gap-2 text-tertiary font-medium">
+            <img src="./asserts/icons/Arrow Icon 2.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/smiley.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-tertiary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-primary text-secondary rounded-md px-2 py-1">Email Marketing</h4>
+          <a href="#" class="flex items-center gap-2 text-secondary font-medium">
+            <img src="./asserts/icons/Arrow Icon 1.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/mail.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-primary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-tertiary text-secondary rounded-md px-2 py-1">Content Creation</h4>
+          <a href="#" class="flex items-center gap-2 text-secondary font-medium">
+            <img src="./asserts/icons/Arrow Icon 1.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/cc.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-secondary text-tertiary rounded-2xl shadow-custom p-6 flex flex-col md:flex-row items-center gap-4">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="bg-tertiary text-secondary rounded-md px-2 py-1">Analytics and Tracking</h4>
+          <a href="#" class="flex items-center gap-2 text-tertiary font-medium">
+            <img src="./asserts/icons/Arrow Icon 2.png" alt="icon" class="w-5 h-5">Learn more
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img src="./asserts/illustrations/at.png" alt="Illustration" class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-tertiary rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2 space-y-4">
+        <h3 class="text-3xl font-semibold">Let’s make things happen</h3>
+        <p class="text-secondary">Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
+        <a href="#" class="bg-black text-white px-6 py-3 rounded-lg font-medium inline-block">Get your free proposal</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="./asserts/illustrations/sim.png" alt="Illustration" class="rounded-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+
+<section class="py-16 px-5 md:px-20 bg-none text-tertiary space-y-12 ">
+  <div class="max-w-6xl mx-auto space-y-12">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+        <h2 class="bg-primary text-secondary text-center rounded-md px-3 py-1 md:w-1/6 font-bold bg-primary text-secondary rounded  px-3 mx-2.5 py-2 text-lg font-semibold ">Case Studies</h2>
+        <p class="md:w-5/6 text-secondary font-medium text-lg leading-relaxed">Explore real-life examples of our proven digital marketing success.</p>
+      </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-secondary p-6 rounded-2xl shadow-custom flex flex-col justify-between">
+        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and 25% sales increase.</p>
+        <a href="#" class="text-primary font-semibold mt-4 inline-flex items-center gap-2">
+          Learn more
+          <img src="./asserts/icons/Arrow Icon 1.png" alt="Arrow" class="w-4 h-4">
+        </a>
+      </div>
+      <div class="bg-secondary p-6 rounded-2xl shadow-custom flex flex-col justify-between">
+        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and 25% sales increase.</p>
+        <a href="#" class="text-primary font-semibold mt-4 inline-flex items-center gap-2">
+          Learn more
+          <img src="./asserts/icons/Arrow Icon 1.png" alt="Arrow" class="w-4 h-4">
+        </a>
+      </div>
+      <div class="bg-secondary p-6 rounded-2xl shadow-custom flex flex-col justify-between">
+        <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and 25% sales increase.</p>
+        <a href="#" class="text-primary font-semibold mt-4 inline-flex items-center gap-2">
+          Learn more
+          <img src="./asserts/icons/Arrow Icon 1.png" alt="Arrow" class="w-4 h-4">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Working Process / Accordion Section -->
+
+<section class="py-16 px-6 md:px-20 space-y-12">
+  <div class="max-w-7xl mx-auto space-y-8">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <h2 class="bg-primary text-secondary text-center rounded-md px-3 py-1 font-bold md:w-1/6 bg-primary text-secondary rounded  px-3 mx-2.5 py-2 text-lg font-semibold">Our Working Process</h2>
+      <p class="md:w-5/6 text-secondary font-medium text-lg leading-relaxed">Step-by-Step Guide to Achieving Your Business Goals</p>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Accordion Item -->
+      <div class="bg-primary rounded-2xl shadow-custom overflow-hidden">
+        <button class="w-full flex justify-between items-center px-6 py-6 text-secondary font-semibold text-lg accordion-btn">
+          <span>01 Consultation</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="px-6 py-4 text-secondary hidden accordion-content">
+          During the initial consultation, we discuss your business goals, target audience, and marketing efforts.
+        </div>
+      </div>
+
+      <div class="bg-tertiary rounded-2xl shadow-custom overflow-hidden">
+        <button class="w-full flex justify-between items-center px-6 py-6 text-secondary font-semibold text-lg accordion-btn">
+          <span>02 Research & Strategy</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="px-6 py-4 text-tertiary hidden accordion-content">
+          We conduct research and develop a strategy tailored to your business objectives.
+        </div>
+      </div>
+
+      <div class="bg-tertiary rounded-2xl shadow-custom overflow-hidden">
+        <button class="w-full flex justify-between items-center px-6 py-6 text-secondary font-semibold text-lg accordion-btn">
+          <span>03 Implementation</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="px-6 py-4 text-secondary hidden accordion-content">
+          We implement the plan and ensure everything is aligned with your goals.
+        </div>
+      </div>
+
+      <!-- Add more steps as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+
+<section class="py-16 px-6 md:px-20  space-y-12 ">
+  <div class="max-w-7xl mx-auto space-y-8">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+      <h3 class="bg-primary text-secondary text-center rounded-md px-3 py-1 md:w-1/6 bg-primary text-secondary rounded  px-3 mx-2.5 py-2 text-lg font-semibold">Team</h3>
+      <p class="md:w-5/6 text-black font-medium text-lg leading-relaxed">Meet the skilled and experienced team behind our digital marketing strategies</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Team Member -->
+      <div class="border-2 p-6 rounded-3xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/jonsmith.png" class="w-24 h-24 rounded-full mb-4" alt="John Smith">
+        <h5 class="text-black font-semibold">John Smith</h5>
+        <p class="text-secondary mb-2">CEO & Founder</p>
+        <hr>
+        <p class="text-secondary text-sm mb-2">10+ years of experience in SEO, PPC, and content strategy.</p>
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+      </div>
+
+      <div class="border-2 p-6 rounded-2xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/janedoe.png" class="w-24 h-24 rounded-full mb-4" alt="Jane Doe">
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+        <h5 class="text-primary font-semibold">Jane Doe</h5>
+        <p class="text-secondary mb-2">Director of Operations</p>
+        <p class="text-secondary text-sm mb-2">7+ years in project management and team leadership.</p>
+        
+      </div>
+
+       <div class="border-2 p-6 rounded-2xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/janedoe.png" class="w-24 h-24 rounded-full mb-4" alt="Jane Doe">
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+        <h5 class="text-primary font-semibold">Jane Doe</h5>
+        <p class="text-secondary mb-2">Director of Operations</p>
+        <p class="text-secondary text-sm mb-2">7+ years in project management and team leadership.</p>
+        
+      </div>
+
+       <div class="border-2 p-6 rounded-2xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/janedoe.png" class="w-24 h-24 rounded-full mb-4" alt="Jane Doe">
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+        <h5 class="text-primary font-semibold">Jane Doe</h5>
+        <p class="text-secondary mb-2">Director of Operations</p>
+        <p class="text-secondary text-sm mb-2">7+ years in project management and team leadership.</p>
+        
+      </div>
+
+       <div class="border-2 p-6 rounded-2xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/janedoe.png" class="w-24 h-24 rounded-full mb-4" alt="Jane Doe">
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+        <h5 class="text-primary font-semibold">Jane Doe</h5>
+        <p class="text-secondary mb-2">Director of Operations</p>
+        <p class="text-secondary text-sm mb-2">7+ years in project management and team leadership.</p>
+        
+      </div>
+
+       <div class="border-2 p-6 rounded-2xl shadow-custom flex flex-col items-center text-center">
+        <img src="./asserts/images/janedoe.png" class="w-24 h-24 rounded-full mb-4" alt="Jane Doe">
+        <img src="./asserts/icons/Social icon.png" class="w-6 h-6" alt="Social">
+        <h5 class="text-primary font-semibold">Jane Doe</h5>
+        <p class="text-secondary mb-2">Director of Operations</p>
+        <p class="text-secondary text-sm mb-2">7+ years in project management and team leadership.</p>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <!-- New Contact panel (insert below Services cards, above Case Studies) -->
+   
+  <section class="py-16 px-6 md:px-20 space-y-12">
+     <div class="flex items-center gap-6 mb-6">
+          <div class="bg-primary text-secondary rounded  px-3 mx-2.5 py-2 text-lg font-semibold">Contact Us</div>
+          <p class="text-secondary font-medium">Connect with Us: Let’s Discuss Your Digital Marketing Needs</p>
+        </div>
+    <div class="max-w-7xl mx-auto bg-tertiary rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-start gap-8">
+      
+      <!-- Left: Form -->
+      <div class="md:w-1/2 w-full">
+       
+
+        <div class="flex items-center gap-6 mb-6">
+          <label class="inline-flex items-center gap-3">
+            <input type="radio" name="intent" checked class="form-radio w-5 h-5 border-secondary text-primary" />
+            <span class="text-secondary">Say Hi</span>
+          </label>
+          <label class="inline-flex items-center gap-3">
+            <input type="radio" name="intent" class="form-radio w-5 h-5 border-secondary text-primary" />
+            <span class="text-secondary">Get a Quote</span>
+          </label>
+        </div>
+
+        <form class="space-y-4" id="panelContactForm">
+          <div>
+            <label for="panel-name" class="sr-only">Name</label>
+            <input id="panel-name" name="name" type="text" placeholder="Name" required
+              class="w-full rounded-xl border border-secondary p-4 bg-white text-secondary placeholder-gray-400" />
+          </div>
+
+          <div>
+            <label for="panel-email" class="sr-only">Email</label>
+            <input id="panel-email" name="email" type="email" placeholder="Email*" required
+              class="w-full rounded-xl border border-secondary p-4 bg-white text-secondary placeholder-gray-400" />
+          </div>
+
+          <div>
+            <label for="panel-message" class="sr-only">Message</label>
+            <textarea id="panel-message" name="message" rows="6" placeholder="Message*" required
+              class="w-full rounded-xl border border-secondary p-4 bg-white text-secondary placeholder-gray-400"></textarea>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button type="submit" class="bg-black text-white px-6 py-3 rounded-2xl font-medium w-full">Send message</button>
+          
+          </div>
+
+          <div id="panelMsg" class="hidden text-sm text-primary mt-2"></div>
+        </form>
+      </div>
+
+      <!-- Right: Illustration -->
+      <div class="md:w-1/2 w-full flex justify-center items-center">
+        <img src="./asserts/illustrations/contact.png" alt="Contact Illustration" class="w-100 ml-3.5 md:w-[420px] rounded-lg" />
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- New three-column Footer -->
+  <footer class="py-12 px-6 md:px-20">
+    <div class="max-w-7xl mx-auto bg-secondary text-tertiary rounded-3xl p-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <!-- Left: Logo + Contact -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="./asserts/images/starIcon.png" alt="Logo" class="w-8 h-8 bg-white">
+            <span class="text-2xl font-semibold">Positivus</span>
+          </div>
+          <div class="bg-primary inline-block text-secondary rounded px-3 py-1 text-sm font-medium">Contact us:</div>
+          <div class="space-y-1 mt-2 text-sm">
+            <div>Email: info@positivious.com</div>
+            <div>Phone: 555-567-8901</div>
+            <div>Address: 1234 Main St</div>
+            <div>Moonstone City, Stardust State 12345</div>
+          </div>
+        </div>
+
+        <!-- Center: Nav + Subscribe -->
+        <div class="flex flex-col items-start md:items-center">
+          <nav class="mb-4">
+            <ul class="flex flex-col md:flex-row gap-3 md:gap-6 text-sm">
+              <li><a href="#" class="hover:text-primary">About us</a></li>
+              <li><a href="#" class="hover:text-primary">Services</a></li>
+              <li><a href="#" class="hover:text-primary">Use Cases</a></li>
+              <li><a href="#" class="hover:text-primary">Pricing</a></li>
+              <li><a href="#" class="hover:text-primary">Blog</a></li>
+            </ul>
+          </nav>
+          
+         
+        </div>
+
+        <!-- Right: Social icons -->
+        <div class="flex flex-col items-end space-y-4">
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 bg-tertiary text-black rounded-full flex items-center justify-center"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin"/></a>
+            <a href="#" class="w-10 h-10 bg-tertiary text-black rounded-full flex items-center justify-center"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-new.png" alt="facebook-new"/></a>
+            <a href="#" class="w-10 h-10 bg-tertiary text-black rounded-full flex items-center justify-center"> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/twitter--v1.png" alt="twitter--v1"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-tertiary mt-8 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+        <div>© 2025 Positivus. All Rights Reserved.</div>
+        <div class="mt-4 md:mt-0"><a href="#" class="hover:text-primary">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+ 
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mobile hamburger menu toggle (safe guards)
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // toggle aria-expanded for accessibility
+        const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
+      });
+    }
+
+    // Accordion handlers
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle('hidden');
+        const icon = btn.querySelector('.accordion-icon');
+        if (icon) icon.textContent = content.classList.contains('hidden') ? '+' : '-';
+      });
+    });
+
+    // Footer contact form handler
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('contactMsg');
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const emailInput = document.getElementById('emailFooter');
+
+    if (subscribeBtn && emailInput) {
+      subscribeBtn.addEventListener('click', () => emailInput.focus());
+    }
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get('name')?.toString().trim();
+        const email = formData.get('email')?.toString().trim();
+        const message = formData.get('message')?.toString().trim();
+
+        if (!name || !email || !message) {
+          if (msg) {
+            msg.textContent = 'Please fill out all fields.';
+            msg.classList.remove('hidden');
+          }
+          return;
+        }
+
+        // Fake send for demo — replace with actual API integration later
+        if (msg) {
+          msg.textContent = 'Thanks, ' + name + '! Your message has been sent.';
+          msg.classList.remove('hidden');
+        }
+        form.reset();
+      });
+    }
+  });
+
+</script>
+</html>
